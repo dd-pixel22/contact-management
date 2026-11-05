@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample Input / Output | ContactHub</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="samples" data-title="Sample Input / Output" data-sub="Example run of the C program.">
+<main class="content">
+
+<section class="panel"><h3>Terminal session</h3><pre class="term">
+===== Contact Management (BST) =====
+1.Add  2.Search  3.Delete  4.Display  5.Exit
+Enter choice: 1
+Enter ID, name, phone: 50 Alice 9876543210
+Contact added.
+Enter choice: 1
+Enter ID, name, phone: 30 Bob 9123456780
+Contact added.
+Enter choice: 1
+Enter ID, name, phone: 70 Carol 9988776655
+Contact added.
+Enter choice: 1
+Enter ID, name, phone: 30 Dan 9000000000
+Contact ID already exists!
+Enter choice: 4
+ID     Name                 Phone
+30     Bob                  9123456780
+50     Alice                9876543210
+70     Carol                9988776655
+Enter choice: 2
+Enter ID to search: 70
+Found -> 70 Carol 9988776655
+Enter choice: 2
+Enter ID to search: 99
+Contact not found!
+Enter choice: 3
+Enter ID to delete: 50
+Contact deleted.
+Enter choice: 4
+ID     Name                 Phone
+30     Bob                  9123456780
+70     Carol                9988776655
+Enter choice: 5
+Goodbye!</pre></section>
+</main>
+<script src="app.js"></script></body></html>
