@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contacts | ContactHub</title><link rel="stylesheet" href="style.css"></head>
-<body data-page="contacts" data-title="Contacts" data-sub="Add, search, delete and display contacts stored in the BST.">
+<body data-page="contacts" data-title="Contacts" data-sub="Add, update, delete, search and call your contacts.">
 <main class="content">
-
-<section class="grid2 eq">
- <div class="panel"><h3>Add New Contact</h3>
-  <label>Contact ID<input id="a-id" type="number" min="1" placeholder="e.g. 50"></label>
-  <label>Name<input id="a-name" placeholder="e.g. Alice"></label>
+<section class="panel"><h3>Contact Details</h3>
+ <div class="fgrid">
+  <label>Contact ID<input id="a-id" type="number" min="1" placeholder="e.g. 109"></label>
+  <label>Name<input id="a-name" placeholder="e.g. Sam Carter"></label>
   <label>Phone number<input id="a-phone" placeholder="e.g. 9876543210"></label>
-    <div class="row"><button class="btn" id="btn-add">Add contact</button><button class="btn ghost" id="btn-upd">Update existing</button></div></div>
- <div class="panel"><h3>Search or Delete</h3>
-  <label>Contact ID<input id="q-id" type="number" min="1" placeholder="Enter contact ID"></label>
-  <div class="row"><button class="btn" id="btn-search">Search</button><button class="btn danger" id="btn-del">Delete</button><button class="btn ghost" id="btn-clear">Clear all</button></div>
-  <div class="result" id="result">Results appear here.</div></div>
+  <label>Department<select id="a-dept"></select></label>
+  <label>Status<select id="a-status"></select></label>
+  <label>Map area<select id="a-area"></select></label>
+ </div>
+ <div class="row wrap"><button class="btn" id="btn-add">Add contact</button><button class="btn ghost" id="btn-upd">Update existing</button><button class="btn ghost" id="btn-clr">Clear form</button></div>
+ <div class="result" id="msg">Fill in the details, then add a contact. To update, enter an existing ID.</div>
 </section>
-<section class="panel"><h3>All Contacts (inorder traversal)</h3>
- <div class="scroll"><table><thead><tr><th>ID</th><th>Name</th><th>Phone</th></tr></thead><tbody id="tbody"></tbody></table></div></section>
+<section class="panel"><div class="row wrap between"><h3>Directory</h3>
+ <div class="row wrap"><input id="f-q" placeholder="Search by ID, name or phone"><select id="f-d"></select><button class="btn ghost" id="btn-reset">Reset demo data</button></div></div>
+ <div class="scroll"><table><thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Department</th><th>Area</th><th>Status</th><th>Actions</th></tr></thead><tbody id="tbody"></tbody></table></div></section>
 </main>
 <script src="app.js"></script></body></html>
