@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Map | ContactHub</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="tree" data-title="Contact Map" data-sub="Live view of your contacts. Trace the route to any contact ID.">
+<main class="content">
+
+<section class="panel"><div class="row wrap"><input id="t-id" type="number" placeholder="Contact ID to trace"><button class="btn" id="t-search">Trace path</button><button class="btn ghost" id="t-inorder">Animate inorder</button></div>
+<p class="mut" id="t-msg">Pins glow along the route the search takes.</p>
+<div class="map big"><svg id="tree"></svg></div></section>
+</main>
+<script src="app.js"></script></body></html>
