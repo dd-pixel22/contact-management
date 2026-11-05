@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacts | ContactHub</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="contacts" data-title="Contacts" data-sub="Add, search, delete and display contacts stored in the BST.">
+<main class="content">
+
+<section class="grid2 eq">
+ <div class="panel"><h3>Add New Contact</h3>
+  <label>Contact ID<input id="a-id" type="number" min="1" placeholder="e.g. 50"></label>
+  <label>Name<input id="a-name" placeholder="e.g. Alice"></label>
+  <label>Phone number<input id="a-phone" placeholder="e.g. 9876543210"></label>
+  <button class="btn" id="btn-add">Add contact</button></div>
+ <div class="panel"><h3>Search or Delete</h3>
+  <label>Contact ID<input id="q-id" type="number" min="1" placeholder="Enter contact ID"></label>
+  <div class="row"><button class="btn" id="btn-search">Search</button><button class="btn danger" id="btn-del">Delete</button><button class="btn ghost" id="btn-clear">Clear all</button></div>
+  <div class="result" id="result">Results appear here.</div></div>
+</section>
+<section class="panel"><h3>All Contacts (inorder traversal)</h3>
+ <div class="scroll"><table><thead><tr><th>ID</th><th>Name</th><th>Phone</th></tr></thead><tbody id="tbody"></tbody></table></div></section>
+</main>
+<script src="app.js"></script></body></html>
