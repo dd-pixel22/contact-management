@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Map | ContactHub</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="map" data-title="Live Map" data-sub="Track contacts by location and find the nearest available agent.">
+<main class="content">
+<section class="mapgrid">
+ <div class="panel">
+  <div class="tools"><input id="m-q" placeholder="Search name or ID"><select id="m-d"></select><select id="m-s"></select></div>
+  <div class="map"><svg id="map"></svg></div>
+  <div class="legend" id="legend"></div><p class="mut" id="m-count"></p>
+ </div>
+ <div class="col">
+  <div class="panel" id="m-sel"></div>
+  <div class="panel"><h3>Nearest Available</h3><ul class="ul" id="m-near"></ul></div>
+  <div class="panel"><h3>All Contacts</h3><ul class="ul" id="m-list"></ul></div>
+ </div>
+</section>
+</main>
+<script src="app.js"></script></body></html>
