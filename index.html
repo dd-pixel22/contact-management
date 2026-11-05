@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Good Morning, Student 👋 | ContactHub</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="index" data-title="Good Morning, Student 👋" data-sub="Smart contact management, organized and searchable.">
+<main class="content">
+
+<section class="stats">
+ <div class="panel stat"><span>Total Contacts</span><b id="s-count">0</b><i></i></div>
+ <div class="panel stat"><span>Lookup Depth</span><b id="s-height">0</b><i></i></div>
+ <div class="panel stat"><span>Smallest ID</span><b id="s-min">-</b><i></i></div>
+ <div class="panel stat"><span>Largest ID</span><b id="s-max">-</b><i></i></div>
+</section>
+<section class="grid2">
+ <div class="panel"><h3>Live Contact Map</h3><p class="mut">Every contact is a pin. Lines show how contacts are linked.</p><div class="map"><svg id="tree"></svg></div></div>
+ <div class="col">
+  <div class="panel"><h3>Storage Usage</h3><div class="ringwrap"><div class="ring" id="ring"><div><b id="ring-v">0%</b><small>capacity used</small></div></div></div></div>
+  <div class="panel"><h3>Recent Activity</h3><ul class="feed" id="feed"></ul></div>
+ </div>
+</section>
+<section class="panel"><h3>Contacts in Ascending ID Order</h3><div class="chips" id="chips"></div></section>
+<section class="panel"><h3>Operation Complexity</h3>
+ <div class="bars"><div><span>Insert</span><em style="--w:55%">O(log n) avg · O(n) worst</em></div><div><span>Search</span><em style="--w:55%">O(log n) avg · O(n) worst</em></div><div><span>Delete</span><em style="--w:55%">O(log n) avg · O(n) worst</em></div><div><span>Inorder</span><em style="--w:90%">O(n)</em></div></div></section>
+</main>
+<script src="app.js"></script></body></html>
