@@ -56,6 +56,12 @@ function overview(){
 
 function contacts(){
  const res=(m,c)=>{const r=$('#result');r.textContent=m;r.className='result '+(c||'')};
+  $('#btn-upd').onclick=()=>{
+  const id=parseInt($('#a-id').value),name=$('#a-name').value.trim(),ph=$('#a-phone').value.trim();
+  if(!(id>0)||!name||!/^\d{7,15}$/.test(ph))return res('Enter the ID of an existing contact, plus the new name and phone number.','bad');
+  const f=T.find(id).node;if(!f)return res('Contact not found. Use Add contact to create it.','bad');
+  f.name=name;f.phone=ph;save();log('Updated ID '+id);res('Contact '+id+' updated.','ok');
+  ['#a-id','#a-name','#a-phone'].forEach(s=>$(s).value='');table()};
  const table=()=>{const l=T.inorder();$('#tbody').innerHTML=l.length?l.map(n=>`<tr><td>${n.id}</td><td>${esc(n.name)}</td><td>${esc(n.phone)}</td></tr>`).join(''):'<tr><td colspan="3">No contacts yet. Use "Add New Contact" to create one.</td></tr>'};
  $('#btn-add').onclick=()=>{
   const id=parseInt($('#a-id').value),name=$('#a-name').value.trim(),ph=$('#a-phone').value.trim();
